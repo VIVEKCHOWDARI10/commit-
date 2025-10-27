@@ -10,7 +10,7 @@ bike=( [name]=spenlder [age]=20 [comp]=honda )
 echo ${bike[name]} ${bike[comp]}
 hi="hello"
 echo ${#hi}
-if [[ "${hi}" == *he* ]]
+if [[ ${hi} == *he* ]]
 then 
 	echo "it is not "
 else
