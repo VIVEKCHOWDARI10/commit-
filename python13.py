@@ -4,7 +4,7 @@ def unnamed_pipe_demo():
     r, w = os.pipe()  
     pid = os.fork()   
 
-    if pid > 0:  
+    if pid < 0:  
         os.close(r)  
         message = "Hello from parent"
         os.write(w, message.encode())  
