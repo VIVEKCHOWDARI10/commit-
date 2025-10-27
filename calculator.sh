@@ -15,7 +15,7 @@
 number() {
     local n
     while true; do
-        read -p "$1" n
+        read -r -p "$1" n
         if [[ $n =~ ^-?[0-9]+(\.[0-9]+)?$ ]]; then
             echo $n    # Return the valid number
             return
@@ -29,7 +29,7 @@ number() {
 operator() {
     local op
     while true; do
-        read -p "$1" op
+        read -r -p "$1" op
         if [[ $op =~ ^(\+|-|\*|/|%|\^)$ ]]; then
             echo $op   # Return the valid operator
             return
